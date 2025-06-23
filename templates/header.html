@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <header class="header">
+        <div class="logo">
+            Phish<span class="big-x">X</span>
+        </div>
+        <nav class="nav-links-center">
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('about_us_page') }}" class="nav-link">About Us</a>
+            <a href="{{ url_for('fraud_detection') }}" class="nav-link">Phishing Detection</a>
+        </nav>
+        <div class="auth-buttons-right">
+            <a href="{{ url_for('login_page') }}" class="button-link">Login</a>
+            <a href="{{ url_for('register_page') }}" class="button-link">Register</a>
+        </div>
+    </header>
+    
+</div>
+{% endblock %}

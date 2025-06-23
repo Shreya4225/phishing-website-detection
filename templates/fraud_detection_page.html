@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Fraud Detection{% endblock %}
+{% block content %}
+{% include "header.html" %}
+<!-- Page Header -->
+<header class="page-header" style="background-image: url('../static/images/fdetect.jpg');">
+    <h1>Phishing Detection</h1>
+    <p>PhishSecure: Enhancing Web safety with ML</p>
+</header>
+
+<!-- Outer Box Section -->
+<section class="outer-box-section">
+    <div class="outer-box1">
+        <!-- Our Mission Header -->
+        <h2>Insights on the project</h2>
+        <p>
+            <!-- Content for insights on the project -->
+        </p>
+    
+
+<!-- New Section 1 -->
+<section class="section">
+    <div class="content">
+        <img src="../static/images/fraud2.jpg" alt="Credit Card Fraud Detection" class="image">
+        <div class="text-content">
+            <h2>About Phishing Detection System</h2>
+            <p>
+                <!--Credit Phisihing Detection with Machine Learning is a process of data investigation by a Data Science team and the development of a model that will provide the best results in revealing and preventing fraudulent transactions. This is achieved through bringing together all meaningful features of card users' transactions, such as Date, User Zone, Product Category, Amount, Provider, Client’s Behavioral Patterns, etc. The information is then run through a subtly trained model that finds patterns and rules so that it can classify whether a transaction is fraudulent or is legitimate.!-->
+                Phishing Detection with Machine Learning is a process of data investigation by a Data Science team and the development of a model that excels at distinguishing between malicious phishing attempts and legitimate communications. This is achieved by compiling all significant features from digital interactions—such as sender details, email metadata, URL patterns, message content, and user behavior analytics. The gathered data is then processed through a meticulously trained model that uncovers subtle anomalies and patterns, ultimately classifying whether an email or website is a phishing attack or a genuine communication.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- New Section 2 -->
+<section class="section reverse">
+    <div class="content">
+        <div class="text-content">
+            <h2>Random Forest Algorithm</h2>
+            <p>
+                Random Forest is a powerful machine learning algorithm used in our credit card fraud detection model. It creates multiple decision trees from random subsets of the data and averages their predictions, reducing the risk of overfitting. This method effectively handles the imbalanced nature of fraud detection, focusing on both fraudulent and legitimate transactions.
+
+By analyzing feature importance, Random Forest identifies key attributes that distinguish fraud, such as transaction time, amount, and location. Its robustness and stability make it ideal for real-world data, ensuring high accuracy and reliability in detecting fraudulent activities.            </p>
+        </div>
+        <img src="../static/images/fraud2.png" alt="Another Section Image" class="image">
+    </div>
+</section>
+
+<!-- New Section 2 -->
+<section class="section reverse">
+    <div class="content">
+        <div>
+            <span class="logo-WGAN">WGAN</span>
+        </div>
+        <div class="text-content">
+            <h2>Wasserstein Generative Adversarial Network (WGAN)</h2>
+            <p>
+                Wasserstein Generative Adversarial Network (WGAN) is a powerful machine learning framework used in our model for generating realistic synthetic data and to detect adversarial attack . It leverages the Wasserstein distance to measure the discrepancy between the generated and real data distributions, leading to smoother gradient flows and more stable training compared to traditional GANs. This approach effectively addresses issues like mode collapse and training instability, ensuring that the generated samples accurately represent the underlying data patterns. By incorporating a critic network instead of a conventional discriminator, WGAN not only enhances the quality of synthetic data but also supports robust model performance in tasks such as data augmentation and anomaly detection, making it highly suitable for real-world applications.
+        </div>
+        
+    </div>
+</section>
+
+<!-- <section class="analysis-section">
+    <h2>Model Performance</h2> <br>
+     <br><br>
+    <div class="scores">
+        <pre>
+                Precision    Recall  F1-score   Support
+
+        0       0.96      0.96      0.96     1143
+        1       0.96      0.96      0.96     1143
+
+ Accuracy                           0.96     2286
+        </pre> -->
+    </div>
+</section>
+</div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}

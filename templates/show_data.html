@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Search History{% endblock %}
+
+{% block content %}
+{% include "header2.html" %}
+<section>
+<div class="f-container">
+    <div>
+        <h2>Your comprehensive log of website security checks.</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No.</th>
+                    <th>URL</th>
+                    <th>Result</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr class="{% if row[2] == 1 %}highlight{% else %}no-highlight{% endif %}">
+                    <td>{{ loop.index }}</td>  
+                    <td>{{ row[1] }}</td>
+                    <!-- <td>{{ row[2] }}</td>  -->
+                    <td>
+                        {% if row[2] == 0 %}
+                            Legitimate
+                        {% else %}
+                            Phishing
+                        {% endif %}
+                    </td>
+                    
+                    <td>
+                        <form action="{{ url_for('delete_data', id=row[0]) }}" method="post">
+                            <button type="submit" class="delete-button red-button">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <!-- Container for the download button -->
+        <div class="button-container">
+            <a href="{{ url_for('download_csv') }}">
+                <button class="download-button green-button">Download CSV</button>
+            </a>
+            <a href="{{ url_for('download_fraud_csv') }}">
+                <button class="download-button green-button">Download Fraud Data</button>
+            </a>
+        </div>
+    </div>
+</div>
+</section>
+{% include "footer2.html" %}
+{% endblock %}
+

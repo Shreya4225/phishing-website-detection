@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+{% block content %}
+{% include "header.html" %}
+
+<!-- Page Header -->
+<header class="page-header" style="background-image: url('../static/images/bg9.jpg');">
+    <h1>About Us</h1>
+    <p>Welcome to the Phishing website Detection System!</p>
+</header>
+
+<!-- Outer Box Section -->
+<section class="outer-box-section">
+    <div class="outer-box">
+        <!-- Our Mission Header -->
+        <h2>Our Mission</h2>
+        <!-- Inner Box with Content -->
+        <div class="inner-box">
+            <p>
+                <!--We are Team Techno, a group of final year students passionate about leveraging technology to solve real-world problems.
+                Our mission is to provide a robust and user-friendly system that utilizes advanced machine learning algorithms to identify and prevent credit card fraud. 
+                We believe that through innovative technology and comprehensive data analysis, we can significantly reduce the risk of fraud and enhance the security of financial transactions.-->
+                We are Group 10, a team of final year students dedicated to leveraging technology to address pressing real-world challenges. 
+                Our mission is to develop a robust, user-friendly system that harnesses advanced machine learning algorithms to detect and counteract phishing websites.
+                We believe that by integrating innovative technology with comprehensive data analysis, we can effectively mitigate the risks associated with phishing attacks and enhance the overall security of online interactions.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Team Members Section -->
+<section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="../static/images/pradk_imag.jpeg" alt="Member 1">
+            <p>Pradnya Kudwe</p>
+        </div>
+        <div class="team-member">
+            <img src="../static/images/shreya_pic2.jpeg" alt="Member 2">
+            <p>Shreya Jaygude</p>
+        </div>
+        <div class="team-member">
+            <img src="../static/images/prads_pic.jpeg" alt="Member 3">
+            <p>Pradnya Sonawane</p>
+        </div>
+        <div class="team-member">
+            <img src="../static/images/siddhi_pic.jpeg" alt="Member 4">
+            <p>Siddheshwari Patil</p>
+        </div>
+    </div>
+</section>
+
+{% include "footer2.html" %}
+{% endblock %}

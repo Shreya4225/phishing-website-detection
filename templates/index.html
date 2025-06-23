@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+{% include "header.html" %}
+
+<!-- Welcome Section with Background Image -->
+<div class="welcome-section">
+    <div class="welcome-text">
+        <h1>PhishSecure: Enhancing Web Safety with ML</h1>
+        <p>An Innovative, Reliable, and Holistic Approach for Detecting Phishing Attacks, Designed to Adapt to the Evolving Threat Landscape and Protect Users Globally.</p>
+        <a href="{{ url_for('login_page') }}" class="button-link">Explore Now</a>
+    </div>
+</div>
+
+<!-- Info Sections -->
+<div class="info-sections">
+    <div class="info-box">
+        <img src="/static/images/mainpg1.jpg" alt="Hybrid Analysis Image">
+        <h2>Hybrid Analysis</h2>
+        <p>Hybrid analysis combines URL-based and content-based techniques to provide a comprehensive evaluation of system behaviors and vulnerabilities..</p>
+    </div>
+    <div class="info-box">
+        <img src="/static/images/mainpg2.jpg" alt="Synthetic data generation Image">
+        <h2>Synthetic data generation</h2>
+        <p>Synthetic data analysis involves evaluating artificially generated data to ensure it accurately represents real-world patterns and distributions for model training and validation..</p>
+    </div>
+    <div class="info-box">
+        <img src="/static/images/mainpg3.jpg" alt="Adversarial Robustness Image">
+        <h2>Adversarial Robustness </h2>
+        <p>Adversarial robustness is the ability of a machine learning model to resist adversarial attacks by maintaining accurate predictions even when faced with intentionally manipulated inputs..</p>
+    </div>
+</div>
+
+
+
+{% include "footer.html" %}
+{% endblock %}

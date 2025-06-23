@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Result Page{% endblock %}
+
+{% block content %}
+{% include "header2.html" %}
+<div class="page-wrapper {% if result == 1 %} fraud-bg {% else %} non-fraud-bg {% endif %}">
+<div class="container-result">
+    <h2>Prediction Result</h2>
+    <div class="result">
+        {% if result == 1 %}
+            <p style="color: red;">URL : {{ url }}</p>
+            <p style="color: red;">This URL appears to be unsafe.</p>
+        {% elif result == 0 %}
+            <p style="color: green;">URL : {{ url }}</p>
+            <p style="color: green;">Prediction: This URL is verified as legitimate</p>
+        {% else %}
+            <p style="color: green;">error</p>
+        {% endif %}
+    
+</div>
+{% endblock %}
+

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Predict Result{% endblock %}
+
+{% block content %}
+{% include "header2.html" %}
+
+<div class="webpage-page">
+
+<div class="container-webpage">
+    
+
+    <!-- Phishing Detection Form -->
+    <h1>Fraud Detection Form</h1>
+    <form method="post" action="{{ url_for('input_web_page') }}">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.url.label }}<br>
+            {{ form.url() }}<br>
+            {% for error in form.url.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <div class="button-container">
+            <p><input type="submit" class="button-common" value="Submit"></p>
+        </div>
+        
+    </form>
+    </div>
+</div>
+
+{% include "footer2.html" %}
+{% endblock %}
